@@ -6,6 +6,13 @@
         <div class="pageBox">
             <Pagination :totalNum="dataQuantity" v-bind:pageSize="showSize" v-on:currentChange="getTableData"/>
         </div>
+        <div>
+            <h3>单选框</h3>
+            <ul>
+                <li v-for="item in params"><Radio :lable="item.id" :currentLable="currentlable" v-model="currentlable"/></li>
+            </ul>
+            
+        </div>
     </div>
 </template>
 
@@ -16,6 +23,8 @@ import DataTable from "@/components/common/DataTable";
 import operationGroup from "@/components/common/operationGroup";
 import Pagination from "@/components/common/pagination";
 import Calender from "@/components/common/Calender";
+import Radio from "@/components/common/Radio";
+
     export default {
         name:'dataTableComponent',
         data(){
@@ -30,8 +39,7 @@ import Calender from "@/components/common/Calender";
                 dataQuantity:100,
                 showSize:5,
                 pageIndex:1,
-
-
+                currentlable:[],
                 dateValue:''
             }
         },
@@ -64,7 +72,8 @@ import Calender from "@/components/common/Calender";
             DataTable,
             operationGroup,
             Pagination,
-            Calender           
+            Calender,
+            Radio           
         }
     }
 
