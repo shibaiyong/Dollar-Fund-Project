@@ -33,11 +33,9 @@
 
     },
 
-    motheds:{
+    methods:{
       changeStatus(){
-
-        this.$emit('input',this.currentLable.push(this.lable));
-        
+        this.$emit('input',[this.lable])
       }
     },
 
@@ -68,7 +66,7 @@
     display: inline-block;
     text-align: center;
     line-height: 14px;
-    top:-3px; left:0px;
+    top:-4px; left:0px;
   }
 
 

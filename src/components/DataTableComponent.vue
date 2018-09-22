@@ -45,6 +45,7 @@ import Radio from "@/components/common/Radio";
         },
         updated(){
             //console.log(this.dateValue)
+            console.log(this.currentlable)
         },
         created(){
             console.log(this.dateValue)
@@ -67,6 +68,7 @@ import Radio from "@/components/common/Radio";
         mounted(){
             this.getTableData();
             //console.log(this.dateValue)
+            
         },
         components:{
             DataTable,
