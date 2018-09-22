@@ -16,15 +16,13 @@
         <p v-else>没有找到对应的内容</p>
         <div class="test-messageBox">
             <button @click="openMessage">显示消息框</button>
-            <button @click="hideMessage">隐藏消息框</button>
-            <button @click="showOrhide">隐藏/显示消息框</button>
+            
         </div>
-        <messageBox v-on:nextprocess="callbackFun" :visible="isVisible" :textOptions="textOptions"/>
     </div>
     
 </template>
 <script>
-import messageBox from "@/components/common/messageBox"
+// import messageBox from "@/components/common/messageBox"
 export default {
     name:'grid',
     data(){
@@ -51,7 +49,7 @@ export default {
 
     },
     mounted(){
-
+        console.log(this);
     },
     methods:{
         sortBy(key){
@@ -59,25 +57,20 @@ export default {
             this.order = -this.order
         },
         openMessage(){
-            this.isVisible = true
+            this.MessageBox({
+                cancelBtn:'取消',
+                confirmeBtn:'确认',
+                content:'Hello Word',
+                visible:true
+            }).then(() => {
+                alert('con');
+            },() => {
+                alert('cancel');
+            })
         },
-        hideMessage(){
-            this.isVisible = false
-        },
-        showOrhide(){
-            this.isVisible = !this.isVisible;
-        },
-        cancelFun(){
-            // console.log('点击了取消按钮')
-            this.isVisible = false
-        },
-        confirmFun(){
-            // console.log('点击了确认按钮')
-            this.isVisible = false
-        },
-        callbackFun(type){
-            type == 'cancel' ? this.cancelFun():this.confirmFun();   
-        }
+        
+        
+        
     },
     computed:{
         filterData(){
@@ -105,7 +98,6 @@ export default {
         }
     },
     components:{
-        messageBox
     },
     filters:{
 

@@ -41,6 +41,13 @@ module.exports = {
         pathRewrite: {
           '^/dataTable': ''
         }
+      },
+      '/iKnows':{
+        target:'http://10.50.2.26:8092',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/iKnows': ''
+        }
       }
     }, 
     cssSourceMap: true

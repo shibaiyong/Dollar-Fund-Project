@@ -55,10 +55,19 @@ import Radio from "@/components/common/Radio";
                 this.reciveData = params || '传参一';
             },
             getTableData(index,size){
-                var pageIndex = index || this.pageIndex;
-                var showSize = size || this.showSize;
-                axios.get('/dataTable/getData/'+ pageIndex +'/'+ showSize).then(res => {
+                // var pageIndex = index || this.pageIndex;
+                // var showSize = size || this.showSize;
+                // axios.get('/dataTable/getData/'+ pageIndex +'/'+ showSize).then(res => {
                     
+                //     if(res.status == 200){
+                //         this.reciveData = res.data.result;
+                //     }
+                // })
+            },
+            getTableData1(index,size){
+                
+                axios.get('/iKnows/v1/message/pageList').then(res => {
+                    console.log(res);
                     if(res.status == 200){
                         this.reciveData = res.data.result;
                     }
@@ -68,6 +77,7 @@ import Radio from "@/components/common/Radio";
         mounted(){
             this.getTableData();
             //console.log(this.dateValue)
+            this.getTableData1();
             
         },
         components:{

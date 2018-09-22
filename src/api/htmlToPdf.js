@@ -1,6 +1,7 @@
 // 导出页面为PDF格式  
 import html2Canvas from 'html2canvas'  
-import JsPDF from 'jspdf'  
+import JsPDF from 'jspdf'
+import MessageBox from '@/components/common/message' 
 export default{  
   install (Vue, options) {  
     Vue.prototype.getPdf = function () {  
@@ -55,6 +56,7 @@ export default{
         }  
         PDF.save(title + '.pdf');         
       })
-    }  
+    };
+    Vue.prototype.MessageBox = MessageBox;
   }  
 }  
