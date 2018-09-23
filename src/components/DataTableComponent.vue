@@ -66,7 +66,7 @@ import Radio from "@/components/common/Radio";
             },
             getTableData1(index,size){
                 
-                axios.get('/iKnows/v1/message/pageList').then(res => {
+                axios.get('/iKnows/iknows/headline/list').then(res => {
                     console.log(res);
                     if(res.status == 200){
                         this.reciveData = res.data.result;

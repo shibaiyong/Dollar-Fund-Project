@@ -1,4 +1,4 @@
-// see http://vuejs-templates.github.io/webpack for documentation.
+// see http://vuejs-templates.github.io/webpack for documentation.dfsdfsdfsdf
 var path = require('path')
 
 module.exports = {
@@ -23,7 +23,7 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 9000,
+    port: 8080,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
@@ -43,7 +43,7 @@ module.exports = {
         }
       },
       '/iKnows':{
-        target:'http://10.50.2.26:8092',
+        target:'http://10.50.2.26:8080',
         changeOrigin: true,
         pathRewrite: {
           '^/iKnows': ''
