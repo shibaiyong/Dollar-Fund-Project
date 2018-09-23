@@ -4,12 +4,19 @@ import msgboxVue from './messageBox.vue';
 let MessageConstructor = Vue.extend( msgboxVue );
 let instance;
 const Message = function(options){
-  instance = new MessageConstructor({
 
+  instance = new MessageConstructor({
+    data:options
   });
+  let parentEle = document.getElementById('app');
+
+  if(document.getElementById('messageContainer')){//避免弹窗组件重复向页面追加。
+    let child = document.getElementById('messageContainer');
+    parentEle.removeChild(child);
+  }
+  
   instance.vm = instance.$mount();
-  Object.assign(instance,options)
-  document.body.appendChild(instance.vm.$el);
+  parentEle.appendChild(instance.vm.$el);
 
   return {
     then:(confirmFun,cancelFun) => {         
@@ -17,6 +24,7 @@ const Message = function(options){
       instance.cancelFun = typeof cancelFun == "function" ? cancelFun : '';
     }
   }
+
 }
 
 export default Message

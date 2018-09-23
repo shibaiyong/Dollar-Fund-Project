@@ -16,7 +16,7 @@
         <p v-else>没有找到对应的内容</p>
         <div class="test-messageBox">
             <button @click="openMessage">显示消息框</button>
-            
+            <button @click="openMessage1">显示消息框1</button>
         </div>
     </div>
     
@@ -58,17 +58,32 @@ export default {
         },
         openMessage(){
             this.MessageBox({
-                cancelBtn:'取消',
+
+                cancelBtn:'取',
                 confirmeBtn:'确认',
                 content:'Hello Word',
                 visible:true
+
             }).then(() => {
                 alert('con');
             },() => {
                 alert('cancel');
             })
         },
-        
+        openMessage1(){
+            this.MessageBox({
+
+                cancelBtn:'取东方闪电',
+                confirmeBtn:'确认',
+                content:'Hello Word',
+                visible:true
+
+            }).then(() => {
+                alert('con');
+            },() => {
+                alert('cancel');
+            })
+        }
         
         
     },

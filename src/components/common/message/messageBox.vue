@@ -1,8 +1,8 @@
 <template>
     <div id="messageContainer"  v-show='visible'>
         <div class="messageBox">
-            <div class="mes-content">{{alertParams.content}}</div>
-            <div class="mes-footer"><button @click="cancelCallback">{{alertParams.cancelBtn}}</button><button @click="confirmeCallback">{{alertParams.confirmeBtn}}</button></div>
+            <div class="mes-content">{{content}}</div>
+            <div class="mes-footer"><button @click="cancelCallback">{{cancelBtn}}</button><button @click="confirmeCallback">{{confirmeBtn}}</button></div>
         </div>
     </div>    
 </template>
@@ -13,14 +13,14 @@ export default{
     name:'messageBox',
     data(){
         return {
-            alertParams:{
-                cancelBtn:'取消',
-                confirmeBtn:'确认',
-                content:'Hello Word'
-            },
+
+            cancelBtn:'取消',
+            confirmeBtn:'确认',
+            content:'Hello Word',
             confirmeFun:'',
             cancelFun:'',
             visible:false
+
         }
     },
     created(){
