@@ -52,12 +52,10 @@ node 视频基础篇                                         https://www.rails365.net
 
 前端常见跨域解决方案（全）                              https://segmentfault.com/a/1190000011145364
 
-mvn --projects backend spring-boot:run 
-
-mvn spring-boot:run
-
 https://www.ico.la/   ico图标
 
 dataTable 参数说明                               	https://www.cnblogs.com/hyywaq/p/5919412.html
 
 dataTable 给服务器的参数说明                            http://net08118.blog.163.com/blog/static/11011170420144753828272/
+
+auxre 注册码:                                           https://www.jianshu.com/p/db2a506e8f1c
