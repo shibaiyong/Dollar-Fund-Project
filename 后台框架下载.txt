@@ -59,3 +59,7 @@ dataTable 参数说明                               	https://www.cnblogs.com/hyywaq
 dataTable 给服务器的参数说明                            http://net08118.blog.163.com/blog/static/11011170420144753828272/
 
 auxre 注册码:                                           https://www.jianshu.com/p/db2a506e8f1c
+
+require.ensure按需加载                           https://www.cnblogs.com/fantasy-zxf/p/6760390.html
+
+vue-router 按需加载 官方推荐                           https://www.cnblogs.com/xiaochongchong/p/7772773.html
