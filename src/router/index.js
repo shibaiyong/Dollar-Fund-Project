@@ -62,6 +62,7 @@
 
 
   var router = new Router({
+    mode: 'history',
    routes: [
     {path: '/',redirect:"/listpage"},//portfolio
     {path: '*',redirect:"/listpage"},
