@@ -32,7 +32,7 @@ module.exports = {
         target: 'https://www.sojson.com',//设置你调用的接口域名和端口号 别忘了加http
         changeOrigin: true,
         pathRewrite: {
-          '^/apii': ''
+          '^/apii': 'https://www.sojson.com'
         }
       },
       '/dataTable':{

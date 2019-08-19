@@ -132,7 +132,7 @@ export default {
   mounted: function() {
     this.submitpage(this.pageCurrent, this.pageCount);
     this.fetchperStatus();
-    //this.reqMyservice()
+    this.reqMyservice()
   },
   components: {
     Header
