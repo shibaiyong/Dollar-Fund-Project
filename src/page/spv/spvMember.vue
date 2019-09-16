@@ -10,7 +10,7 @@
           </div>
           <el-tree :data="spvTreeData"
             highlight-current ref="spvTree" :props="defaultProps"
-            @node-click="handleNodeClick" node-key="id"
+            @node-click="handleNodeClick"
             :default-expanded-keys="['S00000']" default-expand-all>
           </el-tree>
         </el-card>

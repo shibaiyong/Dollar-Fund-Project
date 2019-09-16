@@ -62,7 +62,7 @@ export default {
             if(typeof num != 'number'){
                 return ''
             }
-            return toThousands(num);
+            return toThousands(num)
         }
-    },
+    }
 }
